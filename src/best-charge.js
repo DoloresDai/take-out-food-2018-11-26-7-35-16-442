@@ -1,3 +1,7 @@
+//tasking
+//1.get price and count
+//2.compare
+//3.output
 function bestCharge(selectedItems) {
   var originalPrice = 0;
   var specialPrice = 0;
@@ -26,7 +30,3 @@ function bestCharge(selectedItems) {
     }
   }
 }
-//tasking
-//1.获取订单商品的详细单价
-//2.计算合计/另外两种优惠方式
-//3.比较并输出详情页
