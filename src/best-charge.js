@@ -38,3 +38,11 @@ function orderItems(selectedItemsObj) {
     document.write(`${selectedItemsObj[n].name} x ${numbers[n]} = ${selectedItemsObj[n].price*numbers[n]}元
       -----------------------------------`);
   }
+
+  function useDiscount(specialPrice, halfPrice) {
+    document.wirte(`-----------------------------------
+    使用优惠：`)
+    for (let k = 0; k < numbers.length; k++) {
+      specialPrice < halfPrice ? document.wirte(`满30减6元，省${originalPrice- specialPrice}元`) : document.wirte(`使用优惠: 指定菜品半价(${selectedItems[k].name})， 省${selectedItems[k].price*numbers[k]/2}元`);
+    }
+  }
