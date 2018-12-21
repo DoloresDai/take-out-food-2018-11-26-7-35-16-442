@@ -31,3 +31,10 @@ function bestCharge(selectedItems) {
   halfPrice += temp;
   specialPrice = originalPrice - Math.floor(originalPrice % 30) * 6;
 }
+
+function orderItems(selectedItemsObj) {
+  document.write(`============= 订餐明细 =============`);
+  for (let n = 0; n < numbers.length; n++) {
+    document.write(`${selectedItemsObj[n].name} x ${numbers[n]} = ${selectedItemsObj[n].price*numbers[n]}元
+      -----------------------------------`);
+  }
