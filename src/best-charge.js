@@ -46,3 +46,9 @@ function orderItems(selectedItemsObj) {
       specialPrice < halfPrice ? document.wirte(`满30减6元，省${originalPrice- specialPrice}元`) : document.wirte(`使用优惠: 指定菜品半价(${selectedItems[k].name})， 省${selectedItems[k].price*numbers[k]/2}元`);
     }
   }
+
+  function totalPrice(originalPrice) {
+    document.wirte(`总计：${originalPrice}元
+    ===================================`);
+  }
+}
