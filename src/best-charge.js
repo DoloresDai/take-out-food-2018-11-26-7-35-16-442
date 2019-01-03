@@ -30,16 +30,16 @@ function bestCharge(selectedItems) {
   var otherItems = getItems(['ITEM0013', 'ITEM0030']);
   halfPrice = countPrice(halfItems) / 2 + countPrice(otherItems);
   originalPrice = countPrice(selectedItemsArray);
-  specialPrice = originalPrice - Math.floor(originalPrice % 30) * 6;
-  orderItemsList;
-  useDiscount;
-  totalPrice;
+  specialPrice = origi1nalPrice - Math.floor(originalPrice % 30) * 6;
+  orderItemsList(selectedItemsArray, number);
+  useDiscount(specialPrice, halfPrice);
+  totalPrice(originalPrice);
 }
 
-function orderItemsList() {
+function orderItemsList(selectedItemsArray, number) {
   document.write(`============= 订餐明细 =============`);
   for (let n = 0; n < numbers.length; n++) {
-    document.write(`${selectedItemsArray[n].name} x ${number[n]} = ${selectedItemsArray[n].price*numbers[n]}元
+    document.write(`${selectedItemsArray[n].name} x ${number[n]} = ${selectedItemsArray[n].price} * ${numbers[n]}元
       -----------------------------------`);
   }
 
@@ -47,7 +47,7 @@ function orderItemsList() {
     document.wirte(`-----------------------------------
     使用优惠：`)
     for (let k = 0; k < numbers.length; k++) {
-      specialPrice < halfPrice ? document.wirte(`满30减6元，省${originalPrice- specialPrice}元`) : document.wirte(`使用优惠: 指定菜品半价(${halfItems[k].name})， 省${originalPrice- halfPrice}元`);
+      specialPrice < halfPrice ? document.wirte(`满30减6元，省${originalPrice}- ${specialPrice}元`) : document.wirte(`使用优惠: 指定菜品半价(${halfItems[k].name})， 省${originalPrice}-${halfPrice}元`);
     }
   }
 
